@@ -1,0 +1,22 @@
+{
+  "name": "crunch-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start:db": "cd node-server && docker-compose up -d",
+    "wait-for-db": "wait-on tcp:localhost:5432",
+    "install:server": "cd node-server && if [ ! -d node_modules ]; then npm install; fi",
+    "install:client": "cd hydrogen-quickstart && if [ ! -d node_modules ]; then npm install --legacy-peer-deps; fi",
+    "start:server": "cd node-server && nest start --watch",
+    "start:client": "cd hydrogen-quickstart && npm run dev",
+    "start:all": "concurrently -k -s first \"npm run install:server && npm run install:client && npm run start:db && npm run wait-for-db && npm run start:server\" \"npm run wait-on:server && npm run start:client\"",
+    "wait-on:server": "wait-on http://localhost:8080",
+    "test:server": "cd node-server && jest --verbose",
+    "test:client": "cd hydrogen-quickstart && jest --verbose",
+    "test:all": "npm run test:client && npm run test:server"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "wait-on": "^7.2.0"
+  }
+}
