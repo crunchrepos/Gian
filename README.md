@@ -66,7 +66,7 @@ You can test each part separately or together using the following commands:
 
 - **Test the client and server:**
  ```bash
-  npm run test:server
+  npm run test:all
   ```
 - **Test the server:**
   ```bash
