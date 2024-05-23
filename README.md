@@ -27,7 +27,27 @@ Follow these steps to run the project:
 
 ## Running the Project
 
-You can run each part separately or together using the following commands once you are on crunch-app directory:
+1. First time you'll have to init prisma migration to create tables: 
+
+run to up your db
+
+```
+npm run start:db
+```
+
+after your database is ready run the following command to create tables
+```
+npm run prisma:init 
+```
+
+then run start:all to run server and client.
+
+```
+npm run start:all 
+```
+
+
+**After table creation** You can run each part separately or together using the following commands once you are on crunch-app directory:
 
 - **a: Run both server and client together:(preferred)**
    Run the following command in the project root directory:
