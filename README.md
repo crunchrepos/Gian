@@ -7,6 +7,12 @@ To run this project, you need to have the following installed:
 - Node.js v20.x+: Ensure you have Node.js version 20 or higher installed. - Download and install Node.js from the [official Node.js website](https://nodejs.org/)
 - Shopify CLI: Required to run the Shopify Hydrogen project. Installation instructions for the Shopify CLI in the [official Shopify CLI documentation](https://shopify.dev/apps/tools/cli)
 
+## Project Preview
+
+[![Project Preview](http://img.youtube.com/vi/1hvSv7lnBPQ/0.jpg)](https://youtu.be/1hvSv7lnBPQ)
+
+
+
 ## Getting Started
 Follow these steps to run the project:
 
