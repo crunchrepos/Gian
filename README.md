@@ -78,11 +78,17 @@ You can test each part separately or together using the following commands:
   npm run test:client
   ```
 
-## Considerations
-- Client:
+## Considerations & Patterns
+- **Client**:
   - **State Management**: I used react-query for state management, which simplifies handling the state of user data.
   - **User Session Management**: I encountered difficulties using `useSession` as documented in the Hydrogen documentation. I also attempted to use the `./lib/session.js` method, but it did not work as I couldn’t retrieve the session in other contexts. This workaround involved storing the logged-in user information in localStorage. While this is not a best practice due to its impact on server-side rendering (SSR), it was a necessary compromise given the time constraints. With more time, I could have explored better solutions. You can see the attempt in `./routes/set-email.jsx`.
-- Server:
-  - **User and Favorite Relationship**: I established the relationship between User and Favorite models using Prisma with `onDelete: cascade`. Even though there is no route to delete a user, this setup ensures that deleting a user manually from the database won’t cause issues.
-  - **Error Handling**: Error handling with status requests is managed within the common folder.
-  - **Testing**: I did not implement end-to-end (e2e) tests for the controller due to the complexity and the time required to set up a separate test database. Given the simplicity of the project, I prioritized other tasks, but e2e tests could have been added for more thorough testing.
+  - **Service Calls**: All service calls have been added to the `./services/api` directory, where the react-query hooks are located.
+  - **Components**: The developed components are located in `app/components/DialogSign` and `app/components/FavoriteToggleButton`.
+  - **HeaderCtas**: I made a modification to `HeaderCtas` in `app/components/Header` to handle Sign In / Sign Out.
+
+- **Server**:
+   - **User and Favorite Relationship**: I established the relationship between User and Favorite models using Prisma with onDelete: cascade. Even though there is no route to delete a user, this setup ensures that deleting a user manually from the database won’t cause issues.
+   - **Error Handling**: Error handling with status requests is managed within the common folder.
+   - **Testing**: I did not implement end-to-end (e2e) tests for the controller due to the complexity and the time required to set up a separate test database. Given the simplicity of the project, I prioritized other tasks, but e2e tests could have been added for more thorough testing.
+   - **API Documentation**: Swagger was used for API documentation, which is exposed at `/api`. You can access it at [http://localhost:8080/api](http://localhost:8080/api) while server is running.
+
