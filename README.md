@@ -23,8 +23,8 @@ Follow these steps to run the project:
 
 You can run each part separately or together using the following commands once you are on crunch-app directory:
 
-- **Run both server and client together:(preferred)**
-  1. Run the following command in the project root directory:
+- **a: Run both server and client together:(preferred)**
+   Run the following command in the project root directory:
      
      ```
      npm run start:all
@@ -36,7 +36,7 @@ You can run each part separately or together using the following commands once y
   6. Once the server is ready, it starts the Hydrogen client.
 
      
-- **Run the server:**
+- **b.1: Run the server:**
   1. Navigate to the server directory:
      ```
      cd node-server
@@ -50,7 +50,7 @@ You can run each part separately or together using the following commands once y
      yarn start:dev
      ```
 
-- **Run the client:**
+- **b.2: Run the client:**
   1. Navigate to the client directory:
      ```
      cd ../hydrogen-quickstart
@@ -64,16 +64,16 @@ You can run each part separately or together using the following commands once y
 
 You can test each part separately or together using the following commands:
 
-- **Test the client and server:**
+- **a: Test the client and server:**
  ```bash
   npm run test:all
   ```
-- **Test the server:**
+- **b.1: Test the server:**
   ```bash
   npm run test:server
   ```
 
-- **Test the cllient:**
+- **b.2: Test the cllient:**
   ```bash
   npm run test:client
   ```
