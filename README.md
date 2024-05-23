@@ -11,7 +11,7 @@ To run this project, you need to have the following installed:
 
 [![Project Preview](http://img.youtube.com/vi/1hvSv7lnBPQ/0.jpg)](https://youtu.be/1hvSv7lnBPQ)
 
-
+**Notes:** In the presentation, I forgot to show the mobile view, but I tested and developed it for mobile, and it works perfectly as well.
 
 ## Getting Started
 Follow these steps to run the project:
