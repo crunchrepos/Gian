@@ -11,11 +11,13 @@ To run this project, you need to have the following installed:
 Follow these steps to run the project:
 
 1. **Clone the Repository**
-   First, clone the repository to your local machine:
+   First, clone the repository to your local machine and run npm install to install modules:
    ```bash
    git clone https://github.com/grocha7/crunch-app.git
    cd crunch-app
+   npm install
    ```
+   
 
 ## Running the Project
 
